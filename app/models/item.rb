@@ -27,4 +27,9 @@ class Item < ActiveRecord::Base
   has_many :haves, class_name: "Have", foreign_key: "item_id", dependent: :destroy
   has_many :have_users, through: :haves, source: :user
 
+  # amazonの詳細ページURLを取得する
+  def get_amazon_link
+    amazon_root = "http://www.amazon.co.jp"
+    amazon_link = "#{amazon_root}/#{title}/dp/#{asin}"
+  end
 end
