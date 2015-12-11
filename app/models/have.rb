@@ -10,7 +10,5 @@
 #  updated_at :datetime         not null
 #
 
-class Ownership < ActiveRecord::Base
-  belongs_to :user, class_name: "User"
-  belongs_to :item, class_name: "Item"
+class Have < Ownership
 end
