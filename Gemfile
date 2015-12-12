@@ -33,6 +33,8 @@ gem 'amazon-ecs'
 
 gem 'annotate'
 
+gem "font-awesome-rails"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 group :production do

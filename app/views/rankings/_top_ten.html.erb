@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="container-inner inner-default clearfix">
+    <div class="top-ten-title">
+      <h3>
+        <i class="fa fa-star"></i>
+          ランキングTOP10　たくさんの人が<%= type %>しているアイテム
+        <i class="fa fa-star"></i>
+      </h3>
+    </div>
+    <% items.each.with_index(1) do |item, i| %>
+      <div class="item-box">
+        <span class="inner"><%= i %></span>
+        <div class="image">
+          <div class="img-wrap">
+            <% if item.large_image.present? %>
+              <%= image_tag(item.large_image , alt: item.title) %>
+            <% else %>
+              <%= image_tag("no-image.png" , alt: item.title) %>
+            <% end %>
+          </div>
+        </div>
+        <div class="detail">
+          <p class="title">
+            <%= item.title %>
+          </p>
+        </div>
+        <%= render 'items/action' , item: item if logged_in? %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,3 +1,4 @@
+/* itemの一覧画面 */
 .item-box {
   width: 270px;
   margin: 15px;
@@ -54,6 +55,32 @@
     }
   }
 }
+
+/* ランキングページ */
+.top-ten-title{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* バッジ */
+.item-box .inner {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width:  38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 38px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ee757b), to(#c80507));
+  background: -webkit-linear-gradient(top, #ee757b, #c80507);
+  background: linear-gradient(to bottom, #ee757b, #c80507);
+  background: gradient(linear, center top, center bottom, from(#ee757b), to(#c80507));
+}
+
+
+/* itemの詳細ページ */
 .item-single-main {
   width: 400px;
   margin: 0 auto;
