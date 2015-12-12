@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :ownerships, only: [:create, :destroy]
   resources :items , only: [:new , :show]
   resources :rankings do 
-    member do
+    collection do
       get 'have'
       get 'want'
     end
