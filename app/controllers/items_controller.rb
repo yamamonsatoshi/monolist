@@ -13,6 +13,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item_amazon_link = @item.get_amazon_link
   end
 
   private
